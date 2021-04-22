@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<title>a</title>
+	<head>
+		<style>
+			body{
+				background-color: linen;
+			}
+			
+			{% for item in items %}
+			a{{item.name}} {
+				color: maroon;
+				margin-left: 40px;
+				margin-top: {{item.length}}px;
+				position: absolute;
+			}
+			{% endfor %}
+		</style>
+	</head>
+	<body>
+		{% for item in items %}
+			<a{{item.name}}>{{item.name}}</a{{item.name}}>
+		{% endfor %}
+	</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block style %}{% endblock %}
+{% block title %} Timelines {% endblock %}
+
+{% block description %}<p style="font-size:12px" class=center>(Click a topic to see a timeline.)</p>{% endblock %}
+
+{% block content %}
+	<br>
+	{% for topic in topics %}
+		<p class=center><a href={{url_for('timeline', topic=topic.title)}} style="text-decoration:none"> {{topic.title}} </a></p>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<title>Javascript tutorial</title>
+	<head>
+		<style>
+			body{
+				background-color: linen;
+			}
+			
+			h1{
+				color: maroon;
+				margin-left: 40px;
+				margin-top: 700px;
+				position: absolute; /*THIS is crucial; For the oddly specific purposes of this project, we actually want the possibility of elements being overlaid on top of each other; it means they were working down from the same start point on the page. :)*/
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="DemoCanvas" width="400" height="400"></canvas>
+		<script language="javascript">
+			document.write("Hello world!");
+			
+			//Help from https://www.w3resource.com/html5-canvas/html5-canvas-lines.php
+			var canvas = document.getElementById('DemoCanvas');
+			if (canvas.getContext){
+				var ctx = canvas.getContext("2d");
+				var lStart = 50;
+				var lEnd = 200;
+				var yStart = 20;
+				ctx.beginPath();
+				ctx.lineWidth=25;
+				
+				//Coloring in the background, so I can see what space the canvas takes up in the webpage.
+				ctx.fillStyle="red";
+				ctx.fillRect(0,0,canvas.width, canvas.height);
+				
+				// Use a bevel corner.
+				ctx.lineJoin = "bevel";
+				ctx.moveTo(50, 20);
+				ctx.lineTo(150, 120);
+				ctx.stroke();
+				
+				// Use a round corner.
+				ctx.beginPath(); 
+				ctx.lineJoin = "round";
+				ctx.moveTo(50, 140);
+				ctx.lineTo(150, 140);
+				ctx.lineTo(150, 260);
+				ctx.stroke();
+				
+				// User a miter.
+				ctx.beginPath();
+				ctx.lineJoin = "miter";
+				ctx.moveTo(50, 280); 
+				ctx.lineTo(150, 280);
+				ctx.lineTo(150, 400);
+				ctx.stroke();
+			}
+			
+			/*
+			Some questions:
+			
+			What does canvas.getContext return? That's important.
+				It returns a drawing context on the canvas.
+				RenderingContext is the name of the object...
+				CanvasRenderingContext2D for "2d" specifically.
+			//*/
+		</script>
+		<noscript>
+			<p>You have javascript turned off</p>
+		</noscript>
+		
+		<h1>WOO</h1>
+		<h1>HAA</h1>
+	</body>
+</html>

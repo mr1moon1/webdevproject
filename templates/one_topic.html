@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+
+
+{% block title %} {{topic.title}} {% endblock %}
+{% block description %} {{topic.description}} {% endblock %}
+
+
+
+
+{% block content %}
+	<p class=center>It looks like there's only one thing listed under this topic, so a full-on timeline isn't really worth making. Click the following for more information:</p>
+	<br></br>
+	<p class=center><a href={{url_for('artifact', artifact=artifact)}}> {{artifact.title}} </a></p>
+{% endblock %}

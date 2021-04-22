@@ -1,0 +1,95 @@
+:root
+{
+	--horizontal-whitespace: 20px;
+	--crimson: #AA000A;
+	--brown: #a0893b;
+	--rope-gray: #a39e8a;
+	--rope: #9f8a68;
+	--eggshell: #F0EAD6;
+	--cadet-blue: #5F9EA0;
+	--steel-blue: #4682B4;
+	--dark-green: #006400;
+	--dark-slate-gray: #2F4F4F;
+	--navy-blue: #000080;
+	--midnight-blue: #191970;
+}
+
+@font-face
+{
+	font-family: "Hussar Bold";
+	src: url("hussar-bold-web-edition-font/HussarBoldWebEdition-xq5O.otf") format("opentype");
+}
+
+h1
+{
+	font-family: "Hussar Bold", Impact, Charcoal, sans-serif;
+}
+
+p
+{
+	font-weight: light;
+	width: 75%;
+	margin: auto;
+	margin-bottom: var(--horizontal-whitespace);
+}
+
+ol
+{
+	width: 75%;
+	margin: auto;
+	padding: 0px;
+}
+ol li
+{
+	margin-bottom: var(--horizontal-whitespace);
+}
+ol li::before
+{
+	content: "\A";
+	white-space: pre;
+}
+
+img
+{
+	max-width: 75%;
+	max-height: 75%;
+}
+
+iframe
+{
+	width: 560;
+	max-width: 75%;
+	height: 315;
+	max-height: 75%;
+}
+
+body
+{
+	background: #EMBEDED url('static/starrysky.jpg');
+	background-image: url('static/starrysky.jpg');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	
+	font-size: 16px;
+	font-family: "Hussar Bold", "Graphik Web","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif; /*lifted-from-Bon-Appetit (Except for Hussar Bold, which is the primary intended font and is my addition from a different source.)*/
+}
+.mainDiv
+{
+	background-color: --brown;
+	text-align: center;
+	width: 75%;
+	margin: auto;
+	color: var(--midnight-blue);
+}
+.listDiv
+{
+	background-color: var(--rope-gray);
+	text-align: left;
+	width: 75%;
+	margin: auto;
+}
+
+.center {
+	text-align: center;
+	list-style-position: inside;
+}

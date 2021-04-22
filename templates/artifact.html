@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block style %}{% endblock %}
+
+{% block title %} {{artifact.title}} {% endblock %}
+{% block date %} Origin date:&ensp;{{artifact.date}} {% endblock %}
+{% block image %} {{artifact.image}} {% endblock %}
+{% block embed %}<iframe width="560" height="315" src="https://www.youtube.com/embed/ROk_XmYV_WI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{% endblock %}
+{% block description %}{{artifact.description}}{% endblock %}
+{% block category %}<a href={{url_for('timeline', topic=topic.tid)}}>This piece is part of the {{topic.title}} timeline.</a>{% endblock %}
+
+{% block blurb %}
+	<h1> {{artifact.hhh}} </h1>
+	<p class=center>Here is the blurb.</p>
+{% endblock %}
+
+{% block timeline %}{% endblock %}

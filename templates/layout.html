@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/styles.css">
+	
+	
+	<style>
+		:root {
+			--rope-gray: #AA000A;
+		}
+		body {
+			background-image: url('static/starrysky.jpg');
+		}
+	</style>
+	
+	
+	{% block style %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+	
+</head>
+<body>	
+	<nav class=center style="background-color:black; opacity:.7;">
+		<br><h1 style="color:white;"> thymelimne </h1>
+	
+		<a style="color:green; text-decoration:none;" href=url_for('topics')>home</a>
+			&emsp;&emsp;&emsp;
+		<a style="color:green; text-decoration:none;" href="<h1>Hi</h1>">about</a>
+			&emsp;&emsp;&emsp;
+		<a style="color:green; text-decoration:none;" href="<h1>Hi</h1>">login</a>
+		
+		<br></br>
+	</nav>
+	
+	
+
+	<div class="mainDiv"><br>		
+		<div class="listDiv"><br>
+			<h1 class=center>{{self.title()}}</h1>
+			<p class=center>{% block date %}{% endblock %}</p>
+			<p class=center>{% block description %}{% endblock %}</p>
+			<p class=center>{% block embed %}{% endblock %}<img src={% block image %}{% endblock %}></img></p>
+			<p class=center>{% block category %}{% endblock %}</p>
+		
+			{% block content %}{% endblock %}
+		<br></div>
+	</div>
+</body>
